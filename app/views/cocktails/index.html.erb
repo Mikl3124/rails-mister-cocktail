@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://petitpalaisdaglae-gordes.com/wp-content/uploads/2018/08/cocktail-au-Petit-Palais-dAgla%C3%A9.jpg);">
+  <div class="container">
+    <h1>Mister Cocktail</h1>
+    <p>Make your cocktail!</p>
+    <%= link_to 'Ajouter un Cocktail', new_cocktail_path, :class => "btn btn-primary"%>
+  </div>
+</div>
+
+<h1>Liste des cocktails</h1>
+  <body>
+    <% @cocktails.each do |cocktail| %>
+      <ul>
+        <li><%= cocktail.name %></li>
+      </ul>
+      <%= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %> |
+        <%= link_to 'Voir', cocktail_path(cocktail) %>
+      </ul>
+    <% end %>
