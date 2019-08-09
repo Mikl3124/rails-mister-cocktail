@@ -1,3 +1,14 @@
-<h1><%= @cocktail.name %></h1>
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+
+  <div>
+  <%= link_to 'Ajouter un ingrédient', new_ingredient_path, :class => "btn btn-primary"%>
+  </div>
+  <div>
+    <%= link_to 'Revenir à la liste', cocktails_path, :class => "btn btn-primary  mt-4"%>
+  </div>
+
+
+</div>
 
 
